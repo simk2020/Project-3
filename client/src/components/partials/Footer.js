@@ -5,7 +5,7 @@ const Footer = props => {
 
   return (
     <div>
-      <p>&copy; {year} YOUR_NAME</p>
+      <p>&copy; {year} Contact us !! </p>
     </div>
   );
 };

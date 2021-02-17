@@ -1,3 +1,4 @@
+
 import React, { useContext } from 'react';
 import { Store } from '../../store';
 import { Link } from 'react-router-dom';
@@ -15,9 +16,17 @@ const Landing = props => {
       <div className="row">
         <div className="col s12 center-align">
           <h4>
-            <b>YSale</b> A new and better way to yard sale! {' '} <span style={{ fontFamily: 'monospace' }}>Yard Sale</span> 
+            <b>YSale</b> A new and better way to yard sale! {' '} <span style={{ fontFamily: 'monospace' }}>Yard Sale</span> 0
           </h4>
           <br />
+          <p> Zip code :
+Sale Date :
+Sale Time:
+Description/ sale title : 
+Items: 
+Pictures ( not required)
+Address: 
+</p>
           
         </div>
       </div>
@@ -26,3 +35,4 @@ const Landing = props => {
 }
 
 export default Landing;
+
