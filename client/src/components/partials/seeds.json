@@ -1,0 +1,42 @@
+[
+    {
+        "title": "Moving Sale - High End furniture",
+        "description": "EVERYTHING MUST GO!! kitchen, bedroom, living room, office times, bed, TV and much more..",
+        "date": "3/19/2021",
+        "time": "9:00 am - 4 pm",
+        "address" : "125 High Street, New York, 10001",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI-e6djSmlXeBpqtku9GV1uEvAC8pWh9oaTw&usqp=CAU"
+    },
+    {
+        "title": "DO NOT MISS-Estate Sale-Something for everyone!",
+        "description": "EVERYTHING MUST GO!",
+        "date": "3/20/2021",
+        "time": "9:00 am - 12 pm",
+        "address" : "125 High Street, New York, 10001",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI-e6djSmlXeBpqtku9GV1uEvAC8pWh9oaTw&usqp=CAU"
+    },
+    {
+        "title": " Alot of Kids stuff ",
+        "description": "Toys, books, stroller and alot more..",
+        "date": "3/26/2021",
+        "time": "10:00 am - 3pm",
+        "address" : "125 High Street, New York, 10001",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI-e6djSmlXeBpqtku9GV1uEvAC8pWh9oaTw&usqp=CAU"
+    },
+    {
+        "title": "Musical instrument ",
+        "description": "Drums & guitar of all different kinds !",
+        "date": "3/27/2021",
+        "time": "10:00 am - 6 pm",
+        "address" : "125 High Street, New York, 10001",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI-e6djSmlXeBpqtku9GV1uEvAC8pWh9oaTw&usqp=CAU"
+    },
+    {
+        "title": "Household knick-knacks",
+        "description":"something for everyone.",
+        "date": "3/27/2021",
+        "time": "9:00 am - 4 pm",
+        "address" : "125 High Street, New York, 10001",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI-e6djSmlXeBpqtku9GV1uEvAC8pWh9oaTw&usqp=CAU"
+    }
+]
