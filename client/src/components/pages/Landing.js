@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Store } from '../../store';
 import { Link } from 'react-router-dom';
 // import bootstrap from "bootstrap";
-
+import GoogleApiWrapper from "../partials/googlemap";
 
 const Landing = props => {
   const { state } = useContext(Store);
@@ -15,12 +15,13 @@ const Landing = props => {
       <div className="row">
         <div className="col s12 center-align">
           <h4>
-            <b>YSale</b> A new and better way to yard sale! {' '} <span style={{ fontFamily: 'monospace' }}>Yard Sale</span>
+            <b>YSale</b> A new and better way to yard sale! {' '} <span style={{ fontFamily: 'monospace' }}>Yard Sale</span> 
           </h4>
           <br />
             <div className="col s6">
               <card className="salesMap">
                 <p> this is where the map will go</p>
+                {/* <GoogleApiWrapper/> */}
               </card>
             </div>
 
@@ -29,11 +30,11 @@ const Landing = props => {
                 <p>this is where the listed sales will go</p>
               </card>
             </div>
-
-
-          </div>
+          
+          
         </div>
       </div>
+    </div>
   );
 }
 

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect} from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import jwt_decode from 'jwt-decode';
 import setAuthToken from './utils/setAuthToken';
@@ -13,6 +13,8 @@ import Register from './components/pages/Register';
 import Login from './components/pages/Login';
 import PrivateRoute from './components/auth/PrivateRoute';
 import Dashboard from './components/pages/Dashboard';
+import Footer from "./components/partials/Footer";
+
 
 const App = () => {
   const { dispatch } = useContext(Store);
@@ -44,9 +46,11 @@ const App = () => {
         <Switch>
           <PrivateRoute exact path="/dashboard" component={Dashboard} />
         </Switch>
+        <Footer/>
       </div>
     </Router>
   );
 };
+
 
 export default App;
