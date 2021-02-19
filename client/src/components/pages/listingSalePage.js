@@ -11,31 +11,31 @@ const LandingSale = props => {
       <form className="col s12">
         <div className="row">
           <div className="input-field col s12">
-            <input id="Sale_Title" type="text" className="validate" />
+            <input id="title" type="text" className="validate" />
             <label htmlFor="first_name">Sale Title</label>
           </div>
 
           <div className="input-field col s12">
-            <input id="Sale_Title" type="text" className="validate" />
-            <label htmlFor="first_name">Sale Description</label>
+            <input id="description" type="text" className="validate" />
+            <label htmlFor="description">Sale Description</label>
           </div>
 
           <div className="input-field col s12">
-            <input id="sale_description" type="date" className="validate" />
+            <input id="date" type="date" className="validate" />
             <label htmlFor="date">Sale Date</label>
           </div>
 
 
           <div className="input-field col s12">
-            <input id="timefrom" type="time" className="validate" />
+            <input id="time" type="time" className="validate" />
             <label htmlFor="timefrom">Sale from</label>
-            <input id="timeto" type="time" className="validate" />
+            <input id="time" type="time" className="validate" />
             <label htmlFor="timeto">Sale till</label>
           </div>
 
 
           <div className="input-field col s12">
-            <input id="sale_description" type="img" className="validate" />
+            <input id="image" type="img" className="validate" />
             <label htmlFor="pictures">Pictures</label>
           </div>
         </div>
