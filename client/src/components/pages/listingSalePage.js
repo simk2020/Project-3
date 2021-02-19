@@ -1,38 +1,54 @@
 
-import React, { useContext } from 'react';
-import { Store } from '../../store';
-import { Link } from 'react-router-dom';
-// import bootstrap from "bootstrap";
 
+// const LandingSale = props => {
+//   const { state } = useContext(Store);
 
-const Landing = props => {
-  const { state } = useContext(Store);
-
-  console.log({ state, props });
-
+//   console.log({ state, props });
+const LandingSale = props => {
   return (
 
-    <div className="container valign-wrapper">
-      <div className="row">
-        <div className="col s12 center-align">
-          <h4>
-            <b>YSale</b> A new and better way to yard sale! {' '} <span style={{ fontFamily: 'monospace' }}>Yard Sale</span> 0
-          </h4>
-          <br />
-          <p> Zip code :
-Sale Date :
-Sale Time:
-Description/ sale title : 
-Items: 
-Pictures ( not required)
-Address: 
-</p>
-          
+    <div className="row">
+      <form className="col s12">
+        <div className="row">
+          <div className="input-field col s12">
+            <input id="Sale_Title" type="text" className="validate" />
+            <label htmlFor="first_name">Sale Title</label>
+          </div>
+
+          <div className="input-field col s12">
+            <input id="Sale_Title" type="text" className="validate" />
+            <label htmlFor="first_name">Sale Description</label>
+          </div>
+
+          <div className="input-field col s12">
+            <input id="sale_description" type="date" className="validate" />
+            <label htmlFor="date">Sale Date</label>
+          </div>
+
+
+          <div className="input-field col s12">
+            <input id="timefrom" type="time" className="validate" />
+            <label htmlFor="timefrom">Sale from</label>
+            <input id="timeto" type="time" className="validate" />
+            <label htmlFor="timeto">Sale till</label>
+          </div>
+
+
+          <div className="input-field col s12">
+            <input id="sale_description" type="img" className="validate" />
+            <label htmlFor="pictures">Pictures</label>
+          </div>
         </div>
-      </div>
+
+
+        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+    <i class="material-icons right">send</i>
+        </button>
+
+      </form>
     </div>
   );
 }
 
-export default Landing;
+export default LandingSale;
 

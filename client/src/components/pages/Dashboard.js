@@ -1,8 +1,8 @@
 import React, { useEffect, useContext } from 'react';
 import { Store } from '../../store';
 import { logoutUser } from '../../store/actions/authActions';
-
 import API from '../../utils/apiHelper';
+import LandingSale from "./listingSalePage"
 
 const Dashboard = props => {
   const { state, dispatch } = useContext(Store);
@@ -33,6 +33,10 @@ const Dashboard = props => {
               You are logged into a full-stack{' '} <span style={{ fontFamily: 'monospace' }}>MERN</span> app
             </p>
           </h4>
+
+          <p> Create Listing 
+          <LandingSale/>
+          </p>
 
           <button
             className="btn btn-large waves-effect waves-light hoverable blue accent-3"
