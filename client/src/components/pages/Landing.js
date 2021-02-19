@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 // import bootstrap from "bootstrap";
 import GoogleApiWrapper from "../partials/googlemap";
 
+
 const Landing = props => {
   const { state } = useContext(Store);
 
@@ -28,6 +29,7 @@ const Landing = props => {
             <div className="col s6">
               <card className="salesList">
                 <p>this is where the listed sales will go</p>
+               
               </card>
             </div>
           
