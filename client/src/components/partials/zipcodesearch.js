@@ -1,10 +1,8 @@
-// import Zip from 'react-zipcode'
- 
-// const Zipcode = props => {
+import Zip from 'react-zipcode'
 
-//    render ()
-//   <Zip onValue={(value) => console.log(`validated zip code: ${value}`)}>
-// }  
+const Zipcode = (props)=>{
 
+return <Zip onValue={(value) => console.log(`validated zip code: ${value}`)}></Zip>
+}
 
-//  export default Zipcode;
+export default Zipcode;
