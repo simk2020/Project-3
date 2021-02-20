@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import ListingCard from "../partials/listingCard"
 import GoogleApiWrapper from "../partials/googlemap";
 import seeds from "../partials/seeds.json";
+import Carousel from "../partials/carousel";
 
 const Landing = props => {
   const { state } = useContext(Store);
@@ -16,6 +17,7 @@ const Landing = props => {
       <div className="row">
         <div className="col s12 center-align">
           <h4>
+            {/* <Carousel/> */}
             {/* <b>*YSale</b> A new and better way to yard sale! {' '} <span style={{ fontFamily: 'monospace' }}><b>*</b></span>  */}
 
             <h1>YardScout</h1> 
