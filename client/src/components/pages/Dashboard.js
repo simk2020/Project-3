@@ -2,7 +2,7 @@ import React, { useEffect, useContext } from 'react';
 import { Store } from '../../store';
 import { logoutUser } from '../../store/actions/authActions';
 import API from '../../utils/apiHelper';
-import LandingSale from "./listingSalePage"
+import LandingSale from "../partials/listingSaleform"
 
 const Dashboard = props => {
   const { state, dispatch } = useContext(Store);

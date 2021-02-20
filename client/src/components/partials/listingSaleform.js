@@ -7,7 +7,7 @@
 const LandingSale = props => {
   return (
 
-    <div className="row">
+    <div className="row" style={{ height: '1vh',width: '50%' }}>
       <form className="col s12">
         <div className="row">
           <div className="input-field col s12">

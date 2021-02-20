@@ -6,7 +6,8 @@ const Carousel = props => {
     <div id="carouselExampleSlidesOnly" className="carousel slide" data-ride="carousel">
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img className="d-block w-100" src="..." alt="First slide" />
+         { <h5 className="d-block w-100"> YardScout - A New and Better way to Yard Sale! </h5> }
+            {/* <img className="d-block w-100" src="..." alt="First slide" /> */}
           </div>
           <div className="carousel-item">
             <img className="d-block w-100" src="..." alt="Second slide" />
