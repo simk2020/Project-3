@@ -1,7 +1,18 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { Link } from 'react-router-dom';
+import { logoutUser } from '../../store/actions/authActions';
+import { Store } from '../../store';
+
 
 const Navbar = props => {
+  const { state, dispatch } = useContext(Store);
+
+  const onLogoutClick = e => {
+    e.preventDefault();
+
+    logoutUser(props.history)(dispatch);
+  };
+
   return (
 
     <nav>
@@ -36,6 +47,17 @@ const Navbar = props => {
               Login
             </Link>
           </li>
+
+          <li className="col s3">
+            
+            <button onClick={onLogoutClick} className="btn btn-flat black-text hoverable" style={{
+              width: '140px',
+              borderRadius: '3px',
+              letterSpacing: '1.5px',
+            }}>
+              Logout
+            </button>
+          </li>
           {/* <li><a href="sass.html"><i class="material-icons left">search</i></a></li>
           <li><input type="text" placeholder="Enter Zipcode" id="autocomplete-input" class="autocomplete tect-center black-text" ></input></li> */}
         
@@ -43,6 +65,9 @@ const Navbar = props => {
       </ul>
     </div>
   </nav>
+  
+
+
 
   //  
         

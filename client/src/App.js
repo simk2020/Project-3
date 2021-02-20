@@ -14,10 +14,16 @@ import Login from './components/pages/Login';
 import PrivateRoute from './components/auth/PrivateRoute';
 import Dashboard from './components/pages/Dashboard';
 import Footer from "./components/partials/Footer";
-
-
+import ListingSaleform from "./components/partials/listingSaleform";
 const App = () => {
   const { dispatch } = useContext(Store);
+
+  useEffect (() => {
+    window.M.AutoInit ();
+
+  }, [])
+
+
 
   useEffect(() => {
     if (localStorage.jwtToken) {
@@ -45,6 +51,7 @@ const App = () => {
         <Route exact path="/login" component={Login} />
         <Switch>
           <PrivateRoute exact path="/dashboard" component={Dashboard} />
+          <PrivateRoute exact path="/listing/create" component={ListingSaleform}/>
         </Switch>
         <Footer/>
       </div>
