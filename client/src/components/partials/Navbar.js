@@ -36,8 +36,9 @@ const Navbar = props => {
               Login
             </Link>
           </li>
-          <li><input type="text" placeholder="Enter Zipcode" id="autocomplete-input" class="autocomplete tect-center red-text" ></input></li>
-        <li><a href="sass.html"><i class="material-icons left">search</i></a></li>
+          {/* <li><a href="sass.html"><i class="material-icons left">search</i></a></li>
+          <li><input type="text" placeholder="Enter Zipcode" id="autocomplete-input" class="autocomplete tect-center black-text" ></input></li> */}
+        
         
       </ul>
     </div>

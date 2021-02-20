@@ -18,9 +18,22 @@ const Landing = props => {
           <h4>
             {/* <b>*YSale</b> A new and better way to yard sale! {' '} <span style={{ fontFamily: 'monospace' }}><b>*</b></span>  */}
 
-            <span> YardScout - A New and Better way to Yard Sale! </span> 
+            <h1>YardScout</h1> 
+            <h2>A New and Better way to Yard Sale! </h2> 
           </h4>
           <br />
+          <br />
+          <card><h4>Enter your zipcode to get started!</h4>
+          
+          <div className= "row">
+            <div className= "col s2">
+          <a href="sass.html"><i class="material-icons left">search</i></a></div>
+          <div className= "col s10">
+          <input type="text" placeholder="Enter Zipcode" id="autocomplete-input" class="autocomplete tect-center black-text"></input>
+          </div>
+          </div>
+          </card>
+
             <div className="col s6">
               <card className="salesMap">
                 <h5> Listing on the Map</h5>

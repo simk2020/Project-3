@@ -4,10 +4,15 @@ const Footer = props => {
   const year = new Date().getFullYear();
 
   return (
-    <div>
-      <p>&copy; {year} Contact us !! </p>
+   
+    <footer className="page-footer">
+    <div className="footer-copyright">
+      <div className="container" >
+      <center font-color-white>© 2021 by Sim & Sarah</center>
+      </div>
     </div>
-  );
+  </footer>
+  ); 
 };
 
 export default Footer;
