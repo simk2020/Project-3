@@ -6,8 +6,6 @@ import API from "../../utils/apiHelper";
 
 const LandingSale = props => {
 
-  // const { state, dispatch } = useContext(Store);
-  // const errors = state.error;
 
   const titleRef = useRef();
   const descriptionRef = useRef();
@@ -17,10 +15,7 @@ const LandingSale = props => {
   const endtimeRef = useRef();
   const addressRef = useRef();
 
-  // useEffect(() => {
-  //   if (state.auth.isAuthenticated)
-  //     props.history.push('/dashboard');
-  // }, [ state, props ]);
+
 
 
   const submit = (e) => {
@@ -76,7 +71,7 @@ const LandingSale = props => {
             </div>
 
             <div className="input-field col s12">
-              <input id="enddate" type="date" ref={enddateRef} className="validate" />
+
               <label htmlFor="date">End Date</label>
             </div>
 
@@ -88,7 +83,7 @@ const LandingSale = props => {
 
             <div className="input-field col s12">
               <input id="endtime" type="time" ref={endtimeRef} className="validate" />
-              <label htmlFor="timefrom">End Time </label>
+
             </div>
 
 
