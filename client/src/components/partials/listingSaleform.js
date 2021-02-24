@@ -12,6 +12,7 @@ const LandingSale = props => {
   const enddateRef = useRef ();
   const starttimeRef = useRef ();
   const endtimeRef = useRef ();
+  const addressRef = useRef ();
 
 const submit = (e)=> {
 e.preventDefault()
@@ -22,6 +23,7 @@ console.log (startdateRef.current.value)
 console.log (enddateRef.current.value)
 console.log (starttimeRef.current.value)
 console.log (endtimeRef.current.value)
+console.log (addressRef.current.value)
 
 // API.newListing(
 
@@ -40,29 +42,34 @@ console.log (endtimeRef.current.value)
             </div>
 
             <div className="input-field col s12">
-              <input id="description" type="text" className="validate" />
+              <input id="description" type="text" ref={descriptionRef} className="validate" />
               <label htmlFor="description">Description/comments</label>
             </div>
 
             <div className="input-field col s12">
-              <input id="startdate" type="date" className="validate" />
+              <input id="startdate" type="date" ref={startdateRef} className="validate" />
               <label htmlFor="date">Start Date</label>
             </div>
 
             <div className="input-field col s12">
-              <input id="enddate" type="date" className="validate" />
+              <input id="enddate" type="date" ref={enddateRef}className="validate" />
               <label htmlFor="date">End Date</label>
             </div>
 
 
             <div className="input-field col s12">
-              <input id="starttime" type="time" className="validate" />
+              <input id="starttime" type="time" ref={starttimeRef} className="validate" />
               <label htmlFor="timefrom">Start Time</label>
             </div>
 
             <div className="input-field col s12">
-              <input id="endtime" type="time" className="validate" />
-              <label htmlFor="timefrom">End Time </label>
+              <input id="endtime" type="time" ref={endtimeRef} className="validate" />
+              <label htmlFor="timetill">End Time </label>
+            </div>
+
+            <div className="input-field col s12">
+              <input id="address" type="text" ref={addressRef} className="validate" />
+              <label htmlFor="address">Address </label>
             </div>
 
             {/* <div className="input-field col s12">
