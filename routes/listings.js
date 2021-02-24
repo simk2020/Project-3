@@ -2,9 +2,9 @@ const express = require('express');
 const router = express.Router();
 
 router.post('/', (req, res) => {
-  const { _id, name, email, date } = req.user;
+  const { title, description, startdate, enddate, starttime, endtime } = req.user;
 
-  return res.json({ _id, name, email, date });
+  return res.json({ title, description, startdate, enddate, starttime, endtime });
 });
 
 module.exports = router;
