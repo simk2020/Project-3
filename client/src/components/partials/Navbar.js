@@ -1,16 +1,17 @@
 import React, {useContext} from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { logoutUser } from '../../store/actions/authActions';
 import { Store } from '../../store';
 
 
 const Navbar = props => {
   const { state, dispatch } = useContext(Store);
+  const history = useHistory();
 
   const onLogoutClick = e => {
     e.preventDefault();
 
-    logoutUser(props.history)(dispatch);
+    logoutUser(history)(dispatch);
   };
 
   return (

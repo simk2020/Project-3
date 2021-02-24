@@ -7,7 +7,8 @@
 const LandingSale = props => {
   return (
     <div className="container valign-wrapper">
-      <div className="row" style={{ height: '1vh', width: '50%' }}>
+      <div className="row" >
+        <h4 className= "center"> POST YOUR SALE</h4>
         <form className="col s12">
           <div className="row">
             <div className="input-field col s12">
@@ -34,10 +35,10 @@ const LandingSale = props => {
             </div>
 
 
-            <div className="input-field col s12">
+            {/* <div className="input-field col s12">
               <input id="image" type="img" className="validate" />
               <label htmlFor="pictures">Pictures</label>
-            </div>
+            </div> */}
           </div>
 
 
