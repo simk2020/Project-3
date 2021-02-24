@@ -1,4 +1,4 @@
-import React, { useRef} from "react";
+import React, { useRef } from "react";
 import API from "../../utils/apiHelper";
 
 
@@ -6,27 +6,53 @@ import API from "../../utils/apiHelper";
 
 const LandingSale = props => {
 
-  const titleRef = useRef ();
-  const descriptionRef = useRef ();
-  const startdateRef = useRef ();
-  const enddateRef = useRef ();
-  const starttimeRef = useRef ();
-  const endtimeRef = useRef ();
+  // const { state, dispatch } = useContext(Store);
+  // const errors = state.error;
 
-const submit = (e)=> {
-e.preventDefault()
+  const titleRef = useRef();
+  const descriptionRef = useRef();
+  const startdateRef = useRef();
+  const enddateRef = useRef();
+  const starttimeRef = useRef();
+  const endtimeRef = useRef();
+  const addressRef = useRef();
 
-console.log (titleRef.current.value);
-console.log (descriptionRef.current.value);
-console.log (startdateRef.current.value);
-console.log (enddateRef.current.value);
-console.log (starttimeRef.current.value);
-console.log (endtimeRef.current.value);
+  // useEffect(() => {
+  //   if (state.auth.isAuthenticated)
+  //     props.history.push('/dashboard');
+  // }, [ state, props ]);
 
-// API.newListing(
 
-// ).then 
-}
+  const submit = (e) => {
+    e.preventDefault()
+
+    console.log(titleRef.current.value);
+    console.log(descriptionRef.current.value);
+    console.log(startdateRef.current.value);
+    console.log(enddateRef.current.value);
+    console.log(starttimeRef.current.value);
+    console.log(endtimeRef.current.value);
+    console.log(addressRef.current.value);
+    // dispatch(setErrors({ response: { data: {} } }));
+
+
+    // API.newListing(
+    //   listingdata = ({
+
+    //   title: titleRef.current.value,
+    //   description: descriptionRef.current.value,
+    //   startdate: startdateRef.current.value,
+    //   enddate: enddateRef.current.value,
+    //   starttime: starttimeRef.current.value,
+    //   endtime: endtimeRef.current.value,
+    //   addresss: addressRef.current.value
+    //   })
+    // ).then
+    // (listingdata, props.history)(dispatch);
+    
+
+
+    };
 
   return (
     <div className="container valign-wrapper">
@@ -45,24 +71,29 @@ console.log (endtimeRef.current.value);
             </div>
 
             <div className="input-field col s12">
-              <input id="startdate" type="date"  ref={startdateRef} className="validate" />
+              <input id="startdate" type="date" ref={startdateRef} className="validate" />
               <label htmlFor="date">Start Date</label>
             </div>
 
             <div className="input-field col s12">
-              <input id="enddate" type="date"   ref={enddateRef}className="validate" />
+              <input id="enddate" type="date" ref={enddateRef} className="validate" />
               <label htmlFor="date">End Date</label>
             </div>
 
 
             <div className="input-field col s12">
-              <input id="starttime" type="time"  ref={starttimeRef} className="validate" />
+              <input id="starttime" type="time" ref={starttimeRef} className="validate" />
               <label htmlFor="timefrom">Start Time</label>
             </div>
 
             <div className="input-field col s12">
-              <input id="endtime" type="time"  ref={endtimeRef} className="validate" />
+              <input id="endtime" type="time" ref={endtimeRef} className="validate" />
               <label htmlFor="timefrom">End Time </label>
+            </div>
+
+            <div className="input-field col s12">
+              <input id="address" type="time" ref={addressRef} className="validate" />
+              <label htmlFor="timefrom">Address </label>
             </div>
 
             {/* <div className="input-field col s12">
@@ -72,7 +103,7 @@ console.log (endtimeRef.current.value);
           </div>
 
 
-          <button class="btn waves-effect waves-light" onClick= {submit} name="action">Submit
+          <button class="btn waves-effect waves-light" onClick={submit} name="action">Submit
     <i class="material-icons right">send</i>
           </button>
 
