@@ -6,6 +6,8 @@ import GoogleApiWrapper from "../partials/googlemap";
 import seeds from "../partials/seeds.json";
 import Carousel from "../partials/carousel";
 import Zipcode from "../partials/zipcodesearch"
+//import { Map, GoogleApiWrapper } from 'google-maps-react';
+import Googlemap from '../partials/googlemap';
 
 const Landing = props => {
   const { state } = useContext(Store);
@@ -57,16 +59,15 @@ const Landing = props => {
           </card>
 
           <div className="col s6">
-            <card className="salesMap">
+            <div className="salesMap">
               <h5> Listing on the Map</h5>
               
-              {/* <GoogleApiWrapper/> */}
+              <Googlemap/>
 
-            </card>
+            </div>
           </div>
 
-          <div className="col s6">
-            <card className="salesList">
+          <div className="col s6 salesList">
               <h5>Current Listings</h5>
 
               {
@@ -83,8 +84,6 @@ const Landing = props => {
                   />
                 ))
               }
-
-            </card>
           </div>
 
 
