@@ -1,39 +1,69 @@
+import React, { useRef} from "react";
+import API from "../../utils/apiHelper";
 
 
-// const LandingSale = props => {
-//   const { state } = useContext(Store);
 
-//   console.log({ state, props });
+
 const LandingSale = props => {
+
+  const titleRef = useRef ();
+  const descriptionRef = useRef ();
+  const startdateRef = useRef ();
+  const enddateRef = useRef ();
+  const starttimeRef = useRef ();
+  const endtimeRef = useRef ();
+
+const submit = (e)=> {
+e.preventDefault()
+
+console.log (titleRef.current.value)
+console.log (descriptionRef.current.value)
+console.log (startdateRef.current.value)
+console.log (enddateRef.current.value)
+console.log (starttimeRef.current.value)
+console.log (endtimeRef.current.value)
+
+// API.newListing(
+
+// ).then 
+}
+
   return (
     <div className="container valign-wrapper">
       <div className="row" >
-        <h4 className= "center"> POST YOUR SALE</h4>
+        <h4 className="center"> POST YOUR SALE</h4>
         <form className="col s12">
           <div className="row">
             <div className="input-field col s12">
-              <input id="title" type="text" className="validate" />
-              <label htmlFor="first_name">Sale Title</label>
+              <input id="title" type="text" ref={titleRef} className="validate" />
+              <label htmlFor="first_name">Title</label>
             </div>
 
             <div className="input-field col s12">
               <input id="description" type="text" className="validate" />
-              <label htmlFor="description">Sale Description</label>
+              <label htmlFor="description">Description/comments</label>
             </div>
 
             <div className="input-field col s12">
-              <input id="date" type="date" className="validate" />
-              <label htmlFor="date">Sale Date</label>
+              <input id="startdate" type="date" className="validate" />
+              <label htmlFor="date">Start Date</label>
+            </div>
+
+            <div className="input-field col s12">
+              <input id="enddate" type="date" className="validate" />
+              <label htmlFor="date">End Date</label>
             </div>
 
 
             <div className="input-field col s12">
-              <input id="time" type="time" className="validate" />
-              <label htmlFor="timefrom">Sale from</label>
-              <input id="time" type="time" className="validate" />
-              <label htmlFor="timeto">Sale till</label>
+              <input id="starttime" type="time" className="validate" />
+              <label htmlFor="timefrom">Start Time</label>
             </div>
 
+            <div className="input-field col s12">
+              <input id="endtime" type="time" className="validate" />
+              <label htmlFor="timefrom">End Time </label>
+            </div>
 
             {/* <div className="input-field col s12">
               <input id="image" type="img" className="validate" />
@@ -42,7 +72,7 @@ const LandingSale = props => {
           </div>
 
 
-          <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+          <button class="btn waves-effect waves-light" onClick= {submit} name="action">Submit
     <i class="material-icons right">send</i>
           </button>
 

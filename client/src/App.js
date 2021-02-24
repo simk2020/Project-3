@@ -1,4 +1,4 @@
-import React, { useContext, useEffect} from 'react';
+import React, { useContext, useEffect, useRef} from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import jwt_decode from 'jwt-decode';
 import setAuthToken from './utils/setAuthToken';
@@ -42,6 +42,23 @@ const App = () => {
     }
   }, [ dispatch ]);
 
+
+  function Submitform() {
+    const titleRef = useRef();
+    console.log ( titleRef)
+  }
+
+  //   const onButtonClick = () => {
+  //     // `current` points to the mounted text input element
+  //     titleRef.current.focus();
+  //   };
+  //   return (
+  //     <>
+  //       <input ref={inputEl} type="text" />
+  //       <button onClick={onButtonClick}>Focus the input</button>
+  //     </>
+  //   );
+  // }
   return (
     <Router>
       <div className="App">
@@ -58,6 +75,7 @@ const App = () => {
     </Router>
   );
 };
+
 
 
 export default App;
