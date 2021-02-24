@@ -91,10 +91,6 @@ const LandingSale = props => {
               <label htmlFor="timefrom">End Time </label>
             </div>
 
-            <div className="input-field col s12">
-              <input id="address" type="time" ref={addressRef} className="validate" />
-              <label htmlFor="timefrom">Address </label>
-            </div>
 
             {/* <div className="input-field col s12">
               <input id="image" type="img" className="validate" />
