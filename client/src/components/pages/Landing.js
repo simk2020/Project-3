@@ -9,6 +9,10 @@ import Zipcode from "../partials/zipcodesearch"
 //import { Map, GoogleApiWrapper } from 'google-maps-react';
 import Googlemap from '../partials/googlemap';
 
+const search = (e) => {
+  e.preventDefault()
+};
+
 const Landing = props => {
   const { state } = useContext(Store);
 
@@ -17,20 +21,23 @@ const Landing = props => {
   return (
 
     <div className="container"style={{
-      width: '75%',
+      width: '100%',
       borderRadius: '3px',
       letterSpacing: '1.5px',
 
     }}>
       <div className="row">
-        <div className="col s12 center-align">
+        <div className="card-panel col s12 center-align ">
           {/* <Carousel/> */}
           {/* <b>*YSale</b> A new and better way to yard sale! {' '} <span style={{ fontFamily: 'monospace' }}><b>*</b></span>  */}
-          <h2>YardScout</h2>
-          <h4>A New and Better way to Yard Sale! </h4>
+          <div className="card-panel center-align ">
+                      <h2><b>YardScout</b></h2>
+          <h4>A Better Way To Yard Sale! </h4>
           <br />
           <br />
-          <card>
+          <div>
+            </div>
+            </div>
             <h5>Enter your zipcode to get started!</h5>
             <div className="row" style={{
               // width: '75%',
@@ -38,25 +45,35 @@ const Landing = props => {
               // letterSpacing: '1.5px',
             }}>
 
-              <div className="col s12 center-align ">
+              <div className="col s12 center-align" style={{
+              // width: '20%',
+              // borderRadius: '3px',
+              // textAlign: '50%',
+              // letterSpacing: '1.5px',
+            }}>
               <Zipcode/>
+
                 <ul id="dropdown2" class="dropdown-content">
                   <li><a href="www.google.com">5 miles<span class="badge"></span></a></li>
                   <li><a href="#!">10 miles<span class="badge"></span></a></li>
                   <li><a href="#!">15 miles</a></li>
                 </ul>
-                <a class="btn dropdown-trigger" href="#!" data-target="dropdown2">choose Miles<i class="material-icons right">arrow_drop_down</i></a>
+                <a class="btn dropdown-trigger waves-light" href="#!" data-target="dropdown2">Choose Miles<i class="material-icons right">arrow_drop_down</i></a>
                 <br />
                 <br />
 
                 <div className="col s12 center-align ">
-                  <a href="sass.html"><i class="material-icons">search</i></a></div>
+                <button class="btn waves-effect waves-light" onClick={search} name="action">search
+    <i class="material-icons right">search</i>
+          </button>
+          </div>
                 
                 
               </div>
             </div>
 
-          </card>
+          {/* </div> */}
+
 
           <div className="col s6">
             <div className="salesMap">
