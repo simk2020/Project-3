@@ -92,7 +92,7 @@ const LandingSale = props => {
             </div>
 
             <div className="input-field col s12">
-              <input id="endtime" type="time" ref={addressRef} className="validate" />
+              <input id="address" type="address" ref={addressRef} className="validate" />
               <label htmlFor="address"> Address </label>
             </div>
 
