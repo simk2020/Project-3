@@ -1,9 +1,9 @@
 const { times } = require('lodash');
 const mongoose = require('mongoose');
-const { default: Zipcode } = require('../client/src/components/partials/zipcodesearch');
 const Schema = mongoose.Schema;
 
 const ListingSchema = new Schema({
+
   title: {
     type: String,
     required: true,
@@ -19,29 +19,23 @@ const ListingSchema = new Schema({
     type: Date,
   },
   starttime: {
-    type: TimeRanges ,
+    type: String ,
     required: true,
   },
   endtime: {
-    type: TimeRanges,
+    type: String,
     required: true,
   },
   address: {
-    type: PaymentAddress,
+    type: String,
     required: true,
   },
   zipcode: {
-    type: Zipcode,
+    type: String,
     required: true,
   },
-
-
-
-
-
-
 
 
 });
 
-module.exports = User = mongoose.model('User', UserSchema);
+module.exports = listing = mongoose.model('listing', ListingSchema);

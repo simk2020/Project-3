@@ -44,14 +44,19 @@ const LandingSale = props => {
         starttime: starttimeRef.current.value,
         endtime: endtimeRef.current.value,
         address: addressRef.current.value,
-        zipcode: zipcodeRef.current.value,
+        zipcode: zipcodeRef.current.value
     }
 
-    API.newListing(newlisting).then().catch()
+    API.newListing(newlisting)
+    .then( () => {
+      alert ("Listing Saved ")
+      // dashboard
+    })
+    .catch(()=> {
+      alert ("Listing FAILED ")
+    })
 
-    
-
-
+  
     };
 
   return (
@@ -97,7 +102,7 @@ const LandingSale = props => {
             </div>
 
             <div className="input-field col s12">
-              <input id="zipcode" type="text" ref={addressRef} className="validate" />
+              <input id="zipcode" type="text" ref={zipcodeRef} className="validate" />
               <label htmlFor="zipcode"> Zipcode </label>
             </div>
 

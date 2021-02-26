@@ -2,10 +2,9 @@ import React, { useContext } from 'react';
 import { Store } from '../../store';
 import { Link } from 'react-router-dom';
 import ListingCard from "../partials/listingCard"
-import GoogleApiWrapper from "../partials/googlemap";
 import seeds from "../partials/seeds.json";
 import Carousel from "../partials/carousel";
-import Zipcode from "../partials/zipcodesearch"
+import Zipcode from "../partials/zipcodesearch";
 //import { Map, GoogleApiWrapper } from 'google-maps-react';
 import Googlemap from '../partials/googlemap';
 

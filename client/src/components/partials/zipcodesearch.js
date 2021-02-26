@@ -1,4 +1,4 @@
-import Zip from 'react-zipcode'
+import Zip from 'react-zipcode';
 
 const Zipcode = (props)=>{
 
