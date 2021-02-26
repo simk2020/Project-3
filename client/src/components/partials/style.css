@@ -7,3 +7,14 @@ body {
   main {
     flex: 1 0 auto;
   }
+
+  .card-panel {
+    border-style: groove;
+    border-color: rgb(85, 196, 172);
+    
+    
+  }
+
+  /* #inside-banner {
+    border-color: lightcoral;
+  } */

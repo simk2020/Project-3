@@ -18,8 +18,9 @@ const Navbar = props => {
 
     <nav>
     <div className=" navbar-fixed nav-wrapper">
-      <a href="#" className="brand-logo">Yard Scout</a>
+      <a href="#" className="brand-logo">Yard Scout <i className="material-icons">location_on</i></a>
       <ul id="nav-mobile" className="right hide-on-med-and-down">
+    
         
         <li className="col">
             <Link to="/landing" className="btn btn-flat black-text hoverable" style={{

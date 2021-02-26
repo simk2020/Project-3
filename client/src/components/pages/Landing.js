@@ -26,10 +26,10 @@ const Landing = props => {
 
     }}>
       <div className="row">
-        <div className="card-panel col s12 center-align ">
+        <div className="card-panel col s12 center-align" id="outside-banner">
           {/* <Carousel/> */}
           {/* <b>*YSale</b> A new and better way to yard sale! {' '} <span style={{ fontFamily: 'monospace' }}><b>*</b></span>  */}
-          <div className="card-panel center-align ">
+          <div className="card-panel center-align">
                       <h2><b>YardScout</b></h2>
           <h4>A Better Way To Yard Sale! </h4>
           <br />
