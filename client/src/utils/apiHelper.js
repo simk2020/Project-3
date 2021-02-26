@@ -6,7 +6,7 @@ const userController = {
   },
 
   newListing: function (listingData){
-    return axios.post(`/api/listing`, listingData );
+    return axios.post(`/api/listings`, listingData );
   }
 };
 

@@ -25,29 +25,22 @@ const Dashboard = props => {
 
   return (
 
-    <div className="container center-align"style={{
+    <div className="container center-align" style={{
       width: '100%',
       borderRadius: '3px',
       letterSpacing: '1.5px',
+      }}>
 
-    }}>
 
-    <div className="card-panel valign-wrapper">
-      <div className="row">
-        <div className="card-panel col s12 center-align"
-        style={{
-      width: '100%',
-      borderRadius: '3px',
-      letterSpacing: '1.5px',
-
-    }}>
-          <h4>
-            <b>Hey there,</b> {user.name.split(' ')[0]}
-            <p className="flow-text grey-text text-darken-1">
-              Welcome to YS - Your one stop Yard Sale App{' '} <span style={{ fontFamily: 'monospace' }}></span>
-            </p>
-          </h4>
+      <div className="card-panel valign-wrapper">
+        <div className="row">
+          <div className="card-panel col s12 center-align">
+            <h4><b>Hey there,</b> {user.name.split(' ')[0]} </h4>
+              <p className="flow-text grey-text text-darken-1">
+                Welcome to YS - Your one stop Yard Sale App{' '} <span style={{ fontFamily: 'monospace' }}></span></p>
           </div>
+
+          
           <div className="row">
             <div className="col center-align ">
               <Link to="/listing/create" className="col s4 waves-effect waves-light btn-small">Post your Sale</Link>
@@ -60,15 +53,16 @@ const Dashboard = props => {
               <a href="https://venmo.com" className="col s3 waves-effect waves-light btn-small fa d-flex justify-content-center">Venmo</a>
               <br />
               <br />
+            
 
               <div className="col s6">
-            <div className="salesMap">
-              <h5> Listing on the Map</h5>
-              
-              <Googlemap/>
+                <div className="salesMap">
+                  <h5> Listing on the Map</h5>
 
-            </div>
-          </div>
+                  <Googlemap />
+
+                </div>
+              </div>
 
               <div className="col s6 salesList">
                 <h5>Current Listings</h5>
@@ -87,14 +81,14 @@ const Dashboard = props => {
                 }
               </div>
 
+            </div>
+            </div>
           </div>
-        {/* </div> */}
-      </div>
-      </div>
+        {/* </div>
 
-      {/* click event for "post the sale button" to render "clear the content of the page and then "listing sale form" and  */}
+        {/* click event for "post the sale button" to render "clear the content of the page and then "listing sale form" and  */}
 
-    </div>
+      </div>
     </div >
   );
 };

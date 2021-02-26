@@ -16,6 +16,7 @@ const LandingSale = props => {
   const starttimeRef = useRef();
   const endtimeRef = useRef();
   const addressRef = useRef();
+  const zipcodeRef = useRef();
 
   // useEffect(() => {
   //   if (state.auth.isAuthenticated)
@@ -33,22 +34,21 @@ const LandingSale = props => {
     console.log(starttimeRef.current.value);
     console.log(endtimeRef.current.value);
     console.log(addressRef.current.value);
-    // dispatch(setErrors({ response: { data: {} } }));
+    console.log(zipcodeRef.current.value);
+  
+    const newlisting = {
+        title: titleRef.current.value,
+        description: descriptionRef.current.value,
+        startdate: startdateRef.current.value,
+        enddate: enddateRef.current.value,
+        starttime: starttimeRef.current.value,
+        endtime: endtimeRef.current.value,
+        address: addressRef.current.value,
+        zipcode: zipcodeRef.current.value,
+    }
 
+    API.newListing(newlisting).then().catch()
 
-    // API.newListing(
-    //   listingdata = ({
-
-    //   title: titleRef.current.value,
-    //   description: descriptionRef.current.value,
-    //   startdate: startdateRef.current.value,
-    //   enddate: enddateRef.current.value,
-    //   starttime: starttimeRef.current.value,
-    //   endtime: endtimeRef.current.value,
-    //   addresss: addressRef.current.value
-    //   })
-    // ).then
-    // (listingdata, props.history)(dispatch);
     
 
 
@@ -92,17 +92,20 @@ const LandingSale = props => {
             </div>
 
             <div className="input-field col s12">
-              <input id="address" type="address" ref={addressRef} className="validate" />
+              <input id="address" type="text" ref={addressRef} className="validate" />
               <label htmlFor="address"> Address </label>
             </div>
 
+            <div className="input-field col s12">
+              <input id="zipcode" type="text" ref={addressRef} className="validate" />
+              <label htmlFor="zipcode"> Zipcode </label>
+            </div>
 
             {/* <div className="input-field col s12">
               <input id="image" type="img" className="validate" />
               <label htmlFor="pictures">Pictures</label>
             </div> */}
           </div>
-
 
           <button class="btn waves-effect waves-light" onClick={submit} name="action">Submit
     <i class="material-icons right">send</i>

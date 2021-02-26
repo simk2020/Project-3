@@ -48,17 +48,7 @@ const App = () => {
     console.log ( titleRef)
   }
 
-  //   const onButtonClick = () => {
-  //     // `current` points to the mounted text input element
-  //     titleRef.current.focus();
-  //   };
-  //   return (
-  //     <>
-  //       <input ref={inputEl} type="text" />
-  //       <button onClick={onButtonClick}>Focus the input</button>
-  //     </>
-  //   );
-  // }
+
   return (
     <Router>
       <div className="App">
