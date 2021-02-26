@@ -25,12 +25,20 @@ const Dashboard = props => {
 
   return (
 
+
+
+
+
+
+
     <div className="container center-align"style={{
       width: '100%',
       borderRadius: '3px',
       letterSpacing: '1.5px',
 
     }}>
+
+
 
     <div className="card-panel valign-wrapper">
       <div className="row">
