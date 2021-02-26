@@ -1,15 +1,32 @@
 const express = require('express');
 const router = express.Router();
 
+const Listing = require('../models/Listing');
+
 router.post('/', (req, res) => {
   const { _id, name, email, date } = req.user;
   const { title, description, startdate, enddate, starttime, endtime, address, zipcode  } = req.body;
   
-  console.log ({ title, description, startdate, enddate, starttime, endtime, address  });
+  console.log ({ title, description, startdate, enddate, starttime, endtime, address, zipcode  });
 
-// use  mongoose model for listing and save that to the data base.
 
-  return res.json({ _id, name, email, date });
+const newListing = new Listing({
+  title,
+  description,
+  startdate,
+  enddate,
+  starttime,
+  endtime,
+  address,
+  zipcode
+});
+
+newListing.save()
+
+.then(listing => res.json(listing))
+
+.catch(err => res.status(500).json({message:err.message}));
+
 });
 
 module.exports = router;
