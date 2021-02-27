@@ -7,7 +7,7 @@ import ListingCard from "../partials/listingCard"
 import seeds from "../partials/seeds.json";
 import { Link } from 'react-router-dom';
 import Googlemap from '../partials/googlemap';
-
+import ("../partials/style.css")
 const Dashboard = props => {
   const [listingarray, setlistingarray] = useState([]);
   const { state, dispatch } = useContext(Store);
@@ -54,7 +54,7 @@ const Dashboard = props => {
 
       <div className="card-panel valign-wrapper">
         <div className="row">
-          <div className="card-panel col s12 center-align">
+          <div className="heading col s12 center-align">
             <h4><b>Hey there,</b> {user.name.split(' ')[0]} </h4>
             <p className="flow-text grey-text text-darken-1">
               Welcome to YS - Your one stop Yard Sale App{' '} <span style={{ fontFamily: 'monospace' }}></span></p>
@@ -62,15 +62,15 @@ const Dashboard = props => {
 
 
           <div className="row">
-            <div className="col center-align ">
-              <Link to="/listing/create" className="col s4 waves-effect waves-light btn-small">Post your Sale</Link>
+            <div className="col s12 center-align ">
+              <Link to="/listing/create" className="col s5 waves-effect waves-light btn-small">Post your Sale</Link>
 
               <p className="col s2 center-align " ></p>
-              <p className="col s3 center-align " >Payment:</p>
+              <p className="col s2 center-align " >Payment:</p>
 
-              <a href="https://cash.app" className="col s3 waves-effect waves-light btn-small fa d-flex justify-content-center ">CashApp</a>
+              <a href="https://cash.app" className="col s2 waves-effect waves-light btn-small fa d-flex justify-content-center ">CashApp</a>
               <br />
-              <a href="https://venmo.com" className="col s3 waves-effect waves-light btn-small fa d-flex justify-content-center">Venmo</a>
+              <a href="https://venmo.com" className="col s2 waves-effect waves-light btn-small fa d-flex justify-content-center">Venmo</a>
               <br />
               <br />
 
@@ -96,7 +96,9 @@ const Dashboard = props => {
         </div>
       </div>
     </div >
+  
   );
+  
 };
 
 

@@ -29,6 +29,7 @@
         "mongoose": "~5.11.15",
         "passport": "~0.4.1",
         "passport-jwt": "^4.0.0",
+        "react-bootstrap": "^1.5.0",
         "react-zipcode": "^1.0.1",
         "semantic-ui-react": "^2.0.3",
         "validator": "^11.1.0"

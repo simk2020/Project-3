@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 
 const mapStyles = {
-    width: '30%',
+    width: '60%',
     height: '60%',
   };
 
