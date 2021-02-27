@@ -23,7 +23,7 @@ const Navbar = props => {
     
         
         <li className="col">
-            <Link to="/landing" className="btn btn-flat black-text hoverable" style={{
+            <Link to="/landing" className="btn btn-flat white-text hoverable" style={{
               width: '140px',
               borderRadius: '3px',
               letterSpacing: '1.5px',
@@ -32,7 +32,7 @@ const Navbar = props => {
             </Link>
             </li>
         <li className="col">
-            <Link to="/register" className="btn btn-flat  black-text hoverable" style={{
+            <Link to="/register" className="btn btn-flat  white-text hoverable" style={{
               width: '140px',
               borderRadius: '3px',
               letterSpacing: '1.5px',
@@ -41,7 +41,7 @@ const Navbar = props => {
             </Link>
           </li>
           <li className="col s3">
-            <Link to="/login" className="btn btn-flat black-text hoverable" style={{
+            <Link to="/login" className="btn btn-flat white-text hoverable" style={{
               width: '140px',
               borderRadius: '3px',
               letterSpacing: '1.5px',
@@ -52,7 +52,7 @@ const Navbar = props => {
 
           <li className="col s3">
             
-            <button onClick={onLogoutClick} className="btn btn-flat black-text hoverable" style={{
+            <button onClick={onLogoutClick} className="btn btn-flat white-text hoverable" style={{
               width: '140px',
               borderRadius: '3px',
               letterSpacing: '1.5px',

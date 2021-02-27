@@ -5,7 +5,7 @@ function ListingCard (props){
 
     return (
 
-        <div className="card small" >
+        <div className="card" >
         <img className="card-img-top" src={props.image} alt="Card image"style={{width: '25%'}} />
         <div className="card-body">
           <h5 className="card-title">{props.title}</h5>
@@ -16,7 +16,6 @@ function ListingCard (props){
         </div>
       </div>
         
-
     );
 }
 export default ListingCard;

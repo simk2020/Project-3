@@ -6,6 +6,7 @@ import seeds from "../partials/seeds.json";
 import Carousel from "../partials/carousel";
 import Zipcode from "../partials/zipcodesearch";
 import Googlemap from '../partials/googlemap';
+import "../partials/style.css";
 
 const search = (e) => {
   e.preventDefault()
@@ -21,6 +22,15 @@ const Landing = props => {
   useEffect(() => {
 
     console.log("Landing")
+
+    // db.collection.find() 
+    // listingarray = await listing.find();
+
+    // {props.listings.map(listingarray => (
+    //   <li className="list-group-item" key={listing.id}>
+
+    //   </li>
+
     setlistingarray([
       {
         title: "setlistingarray",
@@ -30,18 +40,17 @@ const Landing = props => {
         time: "listing.time",
         address: "listing.address",
       }
+
+      
     ])
 
   })
 
-
-
   return (
-
+    
     <div className="container">
       <div className="row">
-        <div className="card-panel col s12 center-align" id="outside-banner">
-          {/* <Carousel/> */}
+        <div className="card-panel col s12 center-align z-depth-10" id="outside-banner">
           <div className="card-panel center-align">
             <h2><b>YardScout</b></h2>
             <h4>A Better Way To Yard Sale! </h4>
@@ -92,9 +101,11 @@ const Landing = props => {
             }
           </div>
 
-          <div className="col s12 salesMap">
+          <div className="card-panel col s12 salesMap">
             <h5> Listing on the Map</h5>
-            <Googlemap />
+            <div className="card-panel col s12 salesMap">
+              <Googlemap />
+              </div>
           </div>
 
         </div>
