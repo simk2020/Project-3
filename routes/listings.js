@@ -3,6 +3,12 @@ const router = express.Router();
 
 const Listing = require('../models/Listing');
 
+router.get('/', (req, res) => {
+  const { _id, name, email, date } = req.user;
+  const { title, description, startdate, enddate, starttime, endtime, address, zipcode  } = req.body;
+  console.log ({ title, description, startdate, enddate, starttime, endtime, address, zipcode  });
+});
+
 router.post('/', (req, res) => {
   const { _id, name, email, date } = req.user;
   const { title, description, startdate, enddate, starttime, endtime, address, zipcode  } = req.body;
@@ -18,7 +24,8 @@ const newListing = new Listing({
   starttime,
   endtime,
   address,
-  zipcode
+  zipcode,
+  user:_id
 });
 
 newListing.save()

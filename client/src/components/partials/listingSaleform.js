@@ -50,7 +50,7 @@ const LandingSale = props => {
     API.newListing(newlisting)
     .then( () => {
       alert ("Listing Saved ")
-      // dashboard
+      props.history.push('/dashboard');
     })
     .catch(()=> {
       alert ("Listing FAILED ")

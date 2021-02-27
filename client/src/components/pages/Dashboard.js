@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useEffect, useContext, useState} from 'react';
 import { Store } from '../../store';
 // import { logoutUser } from '../../store/actions/authActions';
 import API from '../../utils/apiHelper';
@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 import Googlemap from '../partials/googlemap';
 
 const Dashboard = props => {
+  const [listingarray, setlistingarray] = useState([]);
   const { state, dispatch } = useContext(Store);
   const user = state.auth.user;
 
@@ -22,6 +23,25 @@ const Dashboard = props => {
   }, [state, props]);
 
 
+  useEffect(() => {
+
+    console.log("Dashboard")
+    setlistingarray([
+      {
+        title:"listing.title",
+        image:"listing.image",
+        description:"listing.description",
+        date:"listing.date",
+        time:"listing.time",
+        address:"listing.address",
+      }
+
+      
+    ])
+  })
+  // fetch all the listings when the component mounts....go into state.
+  // itirate ...display them thru the listing card component.
+  // handle the actual listing card to navigate the user to an more detailed listing page.  
 
   return (
 
@@ -29,18 +49,18 @@ const Dashboard = props => {
       width: '100%',
       borderRadius: '3px',
       letterSpacing: '1.5px',
-      }}>
+    }}>
 
 
       <div className="card-panel valign-wrapper">
         <div className="row">
           <div className="card-panel col s12 center-align">
             <h4><b>Hey there,</b> {user.name.split(' ')[0]} </h4>
-              <p className="flow-text grey-text text-darken-1">
-                Welcome to YS - Your one stop Yard Sale App{' '} <span style={{ fontFamily: 'monospace' }}></span></p>
+            <p className="flow-text grey-text text-darken-1">
+              Welcome to YS - Your one stop Yard Sale App{' '} <span style={{ fontFamily: 'monospace' }}></span></p>
           </div>
 
-          
+
           <div className="row">
             <div className="col center-align ">
               <Link to="/listing/create" className="col s4 waves-effect waves-light btn-small">Post your Sale</Link>
@@ -53,22 +73,12 @@ const Dashboard = props => {
               <a href="https://venmo.com" className="col s3 waves-effect waves-light btn-small fa d-flex justify-content-center">Venmo</a>
               <br />
               <br />
-            
 
-              <div className="col s6">
-                <div className="salesMap">
-                  <h5> Listing on the Map</h5>
-
-                  <Googlemap />
-
-                </div>
-              </div>
-
-              <div className="col s6 salesList">
-                <h5>Current Listings</h5>
+              <div className="col salesList">
+                <h4><b>{user.name.split(' ')[0]}'s Listings:</b> </h4>
 
                 {
-                  seeds.map(listing => (
+                  listingarray.map(listing => (
                     <ListingCard
                       title={listing.title}
                       image={listing.image}
@@ -82,12 +92,8 @@ const Dashboard = props => {
               </div>
 
             </div>
-            </div>
           </div>
-        {/* </div>
-
-        {/* click event for "post the sale button" to render "clear the content of the page and then "listing sale form" and  */}
-
+        </div>
       </div>
     </div >
   );

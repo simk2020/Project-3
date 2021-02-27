@@ -15,6 +15,7 @@ import PrivateRoute from './components/auth/PrivateRoute';
 import Dashboard from './components/pages/Dashboard';
 import Footer from "./components/partials/Footer";
 import ListingSaleform from "./components/partials/listingSaleform";
+
 const App = () => {
   const { dispatch } = useContext(Store);
 
