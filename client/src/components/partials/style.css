@@ -12,26 +12,29 @@ body {
   .card-panel {
     /* border-style: groove; */
     /* border-color: salmon; */
-    background-color: rgb(59, 208, 235);
-    
+    background-color: rgb(139, 217, 231);
   }
 
   .card {
-    background-color: rgb(221, 243, 225);
-
+    background-color:rgb(223, 243, 247);
+    position: unset;
   }
 
   .nav-wrapper {
     /* background-color: rgb(57, 167, 211); */
     background-color: rgb(95, 192, 124);
-
   }
+
   .footer  {
     /* background-color: rgb(57, 167, 211); */
     background-color: rgb(95, 192, 124);
-
   }
 
   /* #inside-banner {
     border-color: lightcoral;
+  } */
+/* 
+  .btn {
+    background-color:rgb(223, 243, 247);
+
   } */

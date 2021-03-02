@@ -74,7 +74,7 @@ const Dashboard = props => {
               <br />
               <br />
 
-              <div className="col salesList">
+              <div className="col s6 salesList">
                 <h4><b>{user.name.split(' ')[0]}'s Listings:</b> </h4>
 
                 {
