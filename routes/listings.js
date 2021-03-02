@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const Listing = require('../models/Listing');
+const listingController = require("../controllers/listingController")
 
 router.get('/', (req, res) => {
   const { _id, name, email, date } = req.user;
@@ -15,6 +16,8 @@ router.post('/', (req, res) => {
   
   console.log ({ title, description, startdate, enddate, starttime, endtime, address, zipcode  });
 
+router.route('/searchZip')
+.get(listingController.findByZipCode)
 
 const newListing = new Listing({
   title,

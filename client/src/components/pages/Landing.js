@@ -62,8 +62,9 @@ const Landing = props => {
           <h5>Enter your zipcode to get started!</h5>
           <div className="row">
 
-            <div className="col s12 center-align">
-              <Zipcode />
+            <div className="col s12 center-align" >
+              <input></input>
+              {/* <Zipcode /> */}
               {/* 
               <ul id="dropdown2" class="dropdown-content">
                 <li><a href="www.google.com">5 miles<span class="badge"></span></a></li>
@@ -77,6 +78,7 @@ const Landing = props => {
               <div className="col s12 center-align ">
                 <button class="btn waves-effect waves-light" onClick={search} name="action">search
                 <i class="material-icons right">search</i>
+                
                 </button>
               </div>
 
@@ -85,7 +87,7 @@ const Landing = props => {
           </div>
 
 
-          <div className="col s12 salesList">
+          <div className="card col s6 salesList">
             <h5>Current Listings</h5>
             {
               listingarray.map(listing => (
@@ -101,11 +103,12 @@ const Landing = props => {
             }
           </div>
 
-          <div className="card-panel col s12 salesMap">
+          <div className="card col s6 salesMap">
             <h5> Listing on the Map</h5>
-            <div className="card-panel col s12 salesMap">
+            <div className="card">
               <Googlemap />
-              </div>
+            </div>
+
           </div>
 
         </div>
