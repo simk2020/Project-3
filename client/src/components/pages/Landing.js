@@ -10,6 +10,10 @@ import API from "../../utils/apiHelper";
 
 const search = (e) => {
   e.preventDefault()
+console.log ();
+// api helper findListingByZip...(pass in the zipcode)
+// req.body
+
 };
 
 const Landing = props => {
@@ -49,9 +53,10 @@ const Landing = props => {
           <h5>Enter your zipcode to get started!</h5>
           <div className="row">
 
-            <div className="col s12 center-align" >
-              <input></input>
-              {/* <Zipcode /> */}
+            <div className="col s4 offset-s4 center-align" >
+              {/* <input></input> */}
+              
+              <Zipcode />
               {/* 
               <ul id="dropdown2" class="dropdown-content">
                 <li><a href="www.google.com">5 miles<span class="badge"></span></a></li>

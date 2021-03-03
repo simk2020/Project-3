@@ -13,9 +13,9 @@ const API = {
     return axios.get(`/api/listings`);
   },
 
-  // getListingsbyUser: function (){
-  //   return axios.get(`/api/listings/user`);
-  // }
+  getListingsByUser: function (){
+    return axios.get(`/api/listings/user`);
+  }
 
 };
 

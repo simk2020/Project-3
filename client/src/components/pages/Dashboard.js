@@ -3,11 +3,12 @@ import { Store } from '../../store';
 // import { logoutUser } from '../../store/actions/authActions';
 import API from '../../utils/apiHelper';
 import ListingCard from "../partials/listingCard"
-
 import seeds from "../partials/seeds.json";
 import { Link } from 'react-router-dom';
 import Googlemap from '../partials/googlemap';
 import ("../partials/style.css")
+
+
 const Dashboard = props => {
   const [listingarray, setlistingarray] = useState([]);
   const { state, dispatch } = useContext(Store);
@@ -26,19 +27,17 @@ const Dashboard = props => {
   useEffect(() => {
 
     console.log("Dashboard")
-    setlistingarray([
-      {
-        title:"listing.title",
-        image:"listing.image",
-        description:"listing.description",
-        date:"listing.date",
-        time:"listing.time",
-        address:"listing.address",
-      }
 
-      
-    ])
-  })
+    API.getListingsByUser()
+    .then((res)=>{
+      console.log (res.data)
+      setlistingarray(res.data)
+    })
+    .catch((err) => {
+      console.log (err)
+    })
+  },[])
+
   // fetch all the listings when the component mounts....go into state.
   // itirate ...display them thru the listing card component.
   // handle the actual listing card to navigate the user to an more detailed listing page.  

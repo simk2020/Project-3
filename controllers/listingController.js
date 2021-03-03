@@ -10,12 +10,13 @@ module.exports= {
         .then (all => res.json(all))
     },
 
-    // findListingByUser: function (req,res){
-    //     Listing 
-    //     .find({_id: req.user._id}) 
-    //     .then (dbzip => res.json(dbzip))},
+    findListingByUser: function (req,res){
+        Listing 
+        .find({user: req.user._id}) 
+        .then (findbyuser => res.json(findbyuser))},
 
 
+      
      createListing: function (req, res){
         const { _id, name, email, date } = req.user;
         const { title, description, startdate, enddate, starttime, endtime, address, zipcode  } = req.body;
@@ -34,7 +35,8 @@ module.exports= {
         zipcode,
         user:_id
       });
-      
+
+
       newListing.save()
       
       .then(listing => res.json(listing))
