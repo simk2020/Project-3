@@ -4,39 +4,10 @@ const router = express.Router();
 const Listing = require('../models/Listing');
 const listingController = require("../controllers/listingController")
 
-router.get('/', (req, res) => {
-  const { _id, name, email, date } = req.user;
-  const { title, description, startdate, enddate, starttime, endtime, address, zipcode  } = req.body;
-  console.log ({ title, description, startdate, enddate, starttime, endtime, address, zipcode  });
-});
+module.exports = (app, requiresAuth) =>{
+  app.get('/api/listings', listingController.findAllListings);
 
-router.post('/', (req, res) => {
-  const { _id, name, email, date } = req.user;
-  const { title, description, startdate, enddate, starttime, endtime, address, zipcode  } = req.body;
-  
-  console.log ({ title, description, startdate, enddate, starttime, endtime, address, zipcode  });
+  app.post('/api/listings', requiresAuth, listingController.createListing);
 
-router.route('/searchZip')
-.get(listingController.findByZipCode)
-
-const newListing = new Listing({
-  title,
-  description,
-  startdate,
-  enddate,
-  starttime,
-  endtime,
-  address,
-  zipcode,
-  user:_id
-});
-
-newListing.save()
-
-.then(listing => res.json(listing))
-
-.catch(err => res.status(500).json({message:err.message}));
-
-});
-
-module.exports = router;
+  // app.get('/api/listings/user',requireAuth, listingController.findListingByUser);
+};
