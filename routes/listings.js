@@ -9,5 +9,5 @@ module.exports = (app, requiresAuth) =>{
 
   app.post('/api/listings', requiresAuth, listingController.createListing);
 
-  // app.get('/api/listings/user',requireAuth, listingController.findListingByUser);
+  app.get('/api/listings/user', requiresAuth, listingController.findListingByUser);
 };
