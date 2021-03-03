@@ -3,10 +3,10 @@ import { Store } from '../../store';
 import { Link } from 'react-router-dom';
 import ListingCard from "../partials/listingCard"
 import seeds from "../partials/seeds.json";
-import Carousel from "../partials/carousel";
 import Zipcode from "../partials/zipcodesearch";
 import Googlemap from '../partials/googlemap';
 import "../partials/style.css";
+import API from "../../utils/apiHelper";
 
 const search = (e) => {
   e.preventDefault()
@@ -23,28 +23,15 @@ const Landing = props => {
 
     console.log("Landing")
 
-    // db.collection.find() 
-    // listingarray = await listing.find();
-
-    // {props.listings.map(listingarray => (
-    //   <li className="list-group-item" key={listing.id}>
-
-    //   </li>
-
-    setlistingarray([
-      {
-        title: "setlistingarray",
-        image: "listing.image",
-        description: "listing.description",
-        date: "listing.date",
-        time: "listing.time",
-        address: "listing.address",
-      }
-
-      
-    ])
-
-  })
+    API.getListings()
+    .then((res)=>{
+      console.log (res.data)
+      setlistingarray(res.data)
+    })
+    .catch((err) => {
+      console.log (err)
+    })
+  },[])
 
   return (
     

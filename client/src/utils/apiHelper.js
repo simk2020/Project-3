@@ -9,9 +9,14 @@ const API = {
     return axios.post(`/api/listings`, listingData );
   },
 
-  getListing: function (){
+  getListings: function (){
     return axios.get(`/api/listings`);
-  }
+  },
+
+  // getListingsbyUser: function (){
+  //   return axios.get(`/api/listings/user`);
+  // }
+
 };
 
 export default API;
