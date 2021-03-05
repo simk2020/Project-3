@@ -15,14 +15,16 @@ module.exports= {
         .find({user: req.user._id}) 
         .then (findbyuser => res.json(findbyuser))},
 
-
+        findListingByZipcode: function (req,res){
+          console.log (req.params)
+          Listing 
+          .find({zipcode: req.params.zipcode}) 
+          .then (findbyzip => res.json(findbyzip))},
       
      createListing: function (req, res){
         const { _id, name, email, date } = req.user;
         const { title, description, startdate, enddate, starttime, endtime, address, zipcode  } = req.body;
         console.log ({ title, description, startdate, enddate, starttime, endtime, address, zipcode  });
-      
-      
       
       const newListing = new Listing({
         title,

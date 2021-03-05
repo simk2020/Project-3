@@ -15,6 +15,10 @@ const API = {
 
   getListingsByUser: function (){
     return axios.get(`/api/listings/user`);
+  },
+
+  getListingsByZipcode: function (zipcode){
+    return axios.get(`/api/listings/zipcode/${zipcode}`);
   }
 
 };
