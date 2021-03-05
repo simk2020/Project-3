@@ -44,7 +44,7 @@ const Login = props => {
             </p>
           </div>
           <form noValidate onSubmit={onSubmit}>
-            <div className="input-field col s8">
+            <div className="input-field col s6 offset-s3">
               <input ref={emailRef} error={errors.incorrect} name="email" type="email"
                      className={classnames('', { invalid: errors.incorrect })} />
 
@@ -53,7 +53,7 @@ const Login = props => {
               <span className="red-text">{errors.incorrect}</span>
             </div>
 
-            <div className="input-field col s8">
+            <div className="input-field col s6 offset-s3">
               <input ref={passwordRef} error={errors.incorrect} name="password" type="password"
                      className={classnames('', { invalid: errors.incorrect })} />
               <label htmlFor="password">Password</label>

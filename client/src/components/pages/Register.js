@@ -48,25 +48,25 @@ const Register = props => {
             </p>
           </div>
           <form noValidate onSubmit={onSubmit}>
-            <div className="input-field col s12">
+            <div className="input-field col s8 offset-s2">
               <input ref={nameRef} error={errors.name} name="name" type="text"
                      className={classnames('', { invalid: errors.name })} />
               <label htmlFor="name">Name</label>
               <span className="red-text">{errors.name}</span>
             </div>
-            <div className="input-field col s12">
+            <div className="input-field col s8 offset-s2">
               <input ref={emailRef} error={errors.email} name="email" type="email"
                      className={classnames('', { invalid: errors.email })} />
               <label htmlFor="email">Email</label>
               <span className="red-text">{errors.email}</span>
             </div>
-            <div className="input-field col s12">
+            <div className="input-field col s8 offset-s2">
               <input ref={passwordRef} error={errors.password} name="password" type="password"
                      className={classnames('', { invalid: errors.password })} />
               <label htmlFor="password">Password</label>
               <span className="red-text">{errors.password}</span>
             </div>
-            <div className="input-field col s12">
+            <div className="input-field col s8 offset-s2">
               <input ref={password2Ref} error={errors.password2} name="password2" type="password"
                      className={classnames('', { invalid: errors.password2 })} />
               <label htmlFor="password2">Confirm Password</label>
