@@ -127,7 +127,7 @@ const LandingSale = props => {
             </div>
 
             <button class="btn waves-effect waves-light" onClick={submit} name="action">Submit
-              <i class="material-icons right">send</i>
+              {/* <i class="material-icons right">send</i> */}
             </button>
 
           </form>
