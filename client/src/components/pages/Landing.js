@@ -59,14 +59,25 @@ const zipcodeRef = useRef ();
       <div className="row">
         <div className="card-panel col s12 center-align z-depth-10" id="outside-banner">
           <div className="card-panel center-align">
-            <h2><b>YardScout</b></h2>
-            <h4>A Better Way To Yard Sale! </h4>
+            <div className= "row">
+              <div className= "col s6">
+              <img src="https://timetradenetwork.files.wordpress.com/2019/05/btakxaa9c.jpg?w=640"></img>
+              </div>
+              <div className= "col s6">
+              <h1><b>YardScout</b>   <i className="material-icons">location_on</i></h1>
+            
+              <h4><b>A Better Way To Yard Sale.</b></h4>
+            <br/>
+            <h4>Easily find yard sales in your area, or create an account to list your own!</h4>
+            </div>
             <br />
             <br />
             <div>
             </div>
           </div>
-          <h5>Enter your zipcode to get started!</h5>
+
+
+          <h5>Enter your zipcode to get scouting!</h5>
           <div className="row">
 
             <div className="col s4 offset-s4 center-align" >
@@ -75,12 +86,13 @@ const zipcodeRef = useRef ();
 
               <div className="col s12 center-align ">
                 <button class="btn waves-effect waves-light" onClick={clearsearcharray} name="action">clear
-                <i class="material-icons right">search</i>
+                {/* <i class="material-icons right">search</i> */}
 
                 </button>
               </div>
 
 
+            </div>
             </div>
           </div>
 
