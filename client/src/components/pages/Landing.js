@@ -8,9 +8,8 @@ import Googlemap from '../partials/googlemap';
 import "../partials/style.css";
 import API from "../../utils/apiHelper";
 
-const search = (e) => {
-  e.preventDefault()
-console.log ();
+const search = (value) => {
+console.log ("this is the zipcode",value);
 // api helper findListingByZip...(pass in the zipcode)
 // req.body
 
@@ -54,18 +53,8 @@ const Landing = props => {
           <div className="row">
 
             <div className="col s4 offset-s4 center-align" >
-              {/* <input></input> */}
               
-              <Zipcode />
-              {/* 
-              <ul id="dropdown2" class="dropdown-content">
-                <li><a href="www.google.com">5 miles<span class="badge"></span></a></li>
-                <li><a href="#!">10 miles<span class="badge"></span></a></li>
-                <li><a href="#!">15 miles</a></li>
-              </ul>
-              <a class="btn dropdown-trigger waves-light" href="#!" data-target="dropdown2">Choose Miles<i class="material-icons right">arrow_drop_down</i></a>
-              <br />
-              <br /> */}
+              <Zipcode banana={search}/>
 
               <div className="col s12 center-align ">
                 <button class="btn waves-effect waves-light" onClick={search} name="action">search
@@ -87,9 +76,12 @@ const Landing = props => {
                   title={listing.title}
                   image={listing.image}
                   description={listing.description}
-                  date={listing.date}
-                  time={listing.time}
+                  startdate={listing.startdate}
+                  enddate={listing.enddate}
+                  starttime={listing.starttime}
+                  endtime={listing.endtime}
                   address={listing.address}
+                  zipcode={listing.zipcode}
                 />
               ))
             }
