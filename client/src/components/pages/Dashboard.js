@@ -5,7 +5,6 @@ import API from '../../utils/apiHelper';
 import ListingCard from "../partials/listingCard"
 import seeds from "../partials/seeds.json";
 import { Link } from 'react-router-dom';
-import Googlemap from '../partials/googlemap';
 import ("../partials/style.css")
 
 
@@ -37,10 +36,6 @@ const Dashboard = props => {
       console.log (err)
     })
   },[])
-
-  // fetch all the listings when the component mounts....go into state.
-  // itirate ...display them thru the listing card component.
-  // handle the actual listing card to navigate the user to an more detailed listing page.  
 
   return (
 
@@ -99,7 +94,5 @@ const Dashboard = props => {
   );
   
 };
-
-
 
 export default Dashboard;
