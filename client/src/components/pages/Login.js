@@ -31,20 +31,20 @@ const Login = props => {
   return (
     <div className="container">
       <div className="row" style={{ marginTop: '4rem' }}>
-        <div className="col s8 offset-s2">
-          <Link to="/" className="btn-flat waves-effect">
+        <div className="card-panel col s8 offset-s2 center-align">
+          {/* <Link to="/" className="btn-flat waves-effect">
             <i className="material-icons left">keyboard_backspace</i> Back to home
-          </Link>
+          </Link> */}
           <div className="col s12" style={{ paddingLeft: '11.250px' }}>
             <h4>
               <b>Login</b> below
             </h4>
-            <p className="grey-text text-darken-1">
+            <p className="black-text text-darken-1 center-align">
               Don't have an account? <Link to="/register">Register</Link>
             </p>
           </div>
           <form noValidate onSubmit={onSubmit}>
-            <div className="input-field col s12">
+            <div className="input-field col s8">
               <input ref={emailRef} error={errors.incorrect} name="email" type="email"
                      className={classnames('', { invalid: errors.incorrect })} />
 
@@ -53,7 +53,7 @@ const Login = props => {
               <span className="red-text">{errors.incorrect}</span>
             </div>
 
-            <div className="input-field col s12">
+            <div className="input-field col s8">
               <input ref={passwordRef} error={errors.incorrect} name="password" type="password"
                      className={classnames('', { invalid: errors.incorrect })} />
               <label htmlFor="password">Password</label>
@@ -63,9 +63,9 @@ const Login = props => {
               <span className="red-text">{errors.message}</span>
             </div>
 
-            <div className="col s12" style={{ paddingLeft: '11.250px' }}>
+            <div className="col s12 center-align" style={{ paddingLeft: '11.250px' }}>
               <button
-                className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+                className="btn btn waves-effect waves-ligh"
                 style={{
                   width: '150px',
                   borderRadius: '3px',
