@@ -30,6 +30,14 @@ body {
     background-color: rgb(95, 192, 124);
   }
 
+  .input-field label {
+    color:black
+  }
+
+  #title {
+    color: black;
+  }
+
   /* #inside-banner {
     border-color: lightcoral;
   } */
