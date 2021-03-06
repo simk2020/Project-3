@@ -16,6 +16,7 @@ function ListingCard (props){
           <p className="card-text">{props.endtime}</p>
           <p className="card-text">{props.address}</p>
           <p className="card-text">{props.zipcode}</p>
+          <p className="btn waves-effect waves-light btn-small fa d-flex justify-content-center">Delete {props.delete}</p>
         </div>
       </div>
         
