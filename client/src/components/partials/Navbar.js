@@ -40,6 +40,7 @@ const Navbar = props => {
               Register
             </Link>
           </li>
+
           <li className="col s3">
             <Link to="/login" className="btn btn-flat white-text hoverable" style={{
               width: '140px',
@@ -49,6 +50,17 @@ const Navbar = props => {
               Login
             </Link>
           </li>
+
+          <li className="col s3">
+            <Link to="/dashboard" className="btn btn-flat white-text hoverable" style={{
+              width: '140px',
+              borderRadius: '3px',
+              letterSpacing: '1.5px',
+            }}>
+              Dashboard
+            </Link>
+          </li>
+
 
           <li className="col s3">
             

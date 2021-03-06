@@ -13,6 +13,10 @@ const API = {
     return axios.get(`/api/listings`);
   },
 
+  // deleteListing: function (){
+  //   return axios.get(`/api/listings`);
+  // },
+
   getListingsByUser: function (){
     return axios.get(`/api/listings/user`);
   },

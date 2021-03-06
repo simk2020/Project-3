@@ -65,17 +65,11 @@ const Dashboard = props => {
 
 
             <div className="row">
-              {/* <div className="col s12 center-align "> */}
-              <div className="col s2"></div>
-              <div className="col s4">
-                <Link to="/listing/create" className="col s5 waves-effect waves-light btn-small center-align">Post your Sale</Link>
-              </div>
-
-              {/* <p className="col s2 center-align"></p> */}
+              
+              <Link to="/listing/create" className="col s3 waves-effect waves-light btn-small fa d-flex justify-content-center">Post your Sale</Link>
+              <Link to="/" className="col s3 btn waves-effect waves-light btn-small fa d-flex justify-content-center" >Search</Link>
               <p className="col s2 center-align">Payment:</p>
-
               <a href="https://cash.app" className="col s2 waves-effect waves-light btn-small fa d-flex justify-content-center ">CashApp</a>
-             
               <a href="https://venmo.com" className="col s2 waves-effect waves-light btn-small fa d-flex justify-content-center">Venmo</a>
               <br />
               <br />
@@ -87,29 +81,30 @@ const Dashboard = props => {
                 <h4><b>{user.name.split(' ')[0]}'s Listings:</b> </h4>
 
                 {
+                  
                   listingarray.map(listing => (
+                    
                     <ListingCard
                       title={listing.title}
-                      image={listing.image}
                       description={listing.description}
-                      date={listing.date}
-                      time={listing.time}
+                      startdate={listing.startdate}
+                      enddate={listing.enddate}
+                      starttime={listing.starttime}
+                      endtime={listing.endtime}
                       address={listing.address}
+                      delete={listing.delete}
                     />
+
                   ))
+
                 }
+
+
               </div>
-
-              {/* </div> */}
-              {/* </div> */}
             </div>
-
           </div>
-
-          {/* </div> */}
         </div>
       </div>
-
     </div >
 
   );
